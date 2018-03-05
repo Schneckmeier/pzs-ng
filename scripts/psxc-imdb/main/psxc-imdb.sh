@@ -895,12 +895,7 @@ if [ ! -z "$RUNCONTINOUS" ] || [ -z "$RECVDARGS" ]; then
     fi
     if [ ! -z "$PLOT" ]; then
      echo "-" >> "$IMDBLNK"
-<<<<<<< HEAD
-     #echo "$PLOT" | fold -s -w $IMDBWIDTH >> "$IMDBLNK"
      echo "$PLOT" | sed 's/\\\\n//g' | fold -s -w $IMDBWIDTH >> "$IMDBLNK"
-=======
-     echo "$PLOT" | fold -s -w $IMDBWIDTH >> "$IMDBLNK"
->>>>>>> parent of bbee044f... plot fixes, see pzs-ng/pzs-ng#28
     fi
     if [ ! -z "$SHOWCOMMENT" ] && [ ! -z "$COMMENT" ]; then
      echo "---" >> "$IMDBLNK"
